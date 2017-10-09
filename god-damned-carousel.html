@@ -254,7 +254,6 @@
             readOnly: true,
             value: false
           },
-        
           autoCycle: {
             type: Boolean,
             value: false
@@ -442,6 +441,14 @@
           callback();
         }, { once: true });
         timeoutFallback.run( callback );
+      }
+      
+      next(){
+        return this._cycleNext();
+      }
+      
+      prev(){
+        return this._cyclePrev();
       }
       
 
